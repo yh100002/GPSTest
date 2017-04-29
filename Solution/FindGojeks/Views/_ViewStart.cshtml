@@ -1,0 +1,37 @@
+@{
+    Layout = "";
+}
+
+<html>
+<body ng-app="angularApp">
+<h1>TEST WEB API FOR SEEKING GOJEK DRIVER</h1>   
+
+<div ng-controller="initDataContoller">        
+<label>Initilize Sample Location Data Before Searching</label><br/>
+<textarea id="textInput" rows="5" cols="70" ng-model="myTextArea1"></textarea><br/>
+<button ng-click="upload()">Init Sample Data</button>
+</div>
+
+<hr>
+<div ng-controller="dataVerifyContoller">        
+<label>Checking For Full Data Of Sample Location</label><br/>
+<textarea id="textInput3" rows="5" cols="70" ng-model="checkArea"></textarea><br/>
+<button ng-click="checking()">Checking Sample Data</button>
+</div>
+<hr>
+
+<div ng-controller="searchContoller">        
+<label>Search Drivers With My Dummy Location And Condition</label><br/>
+<label>Latitude(Double)</label><input type="text" id="in1" ng-model="lat" ng-init="lat=-6.54654">
+<label>Longitude(Double)</label><input type="text" id="in2" ng-model="lon" ng-init="lon=120.65454">
+<label>Radius(Meter)</label><input type="text" id="in3" ng-model="rad" ng-init="rad=50000">
+<label>Limit Count</label><input type="text" id="in4" ng-model="lim" ng-init="lim=10"><br/>
+<textarea id="textInput2" rows="5" cols="70" ng-model="searchResponse">{{searchResponse}}</textarea><br/>
+<button ng-click="search()">Search</button>
+</div>
+
+
+<script src="~/lib/angular/angular.js"></script>
+<script src="~/app/scope.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://cachemanager.net/schemas/cachemanager.json#",
+  "cacheManagers": [
+    {
+      "loggerFactory": {"knownType": "Microsoft" },
+      "name": "simpleMemoryCache",
+      "handles": [
+        {
+          "knownType": "Dictionary"
+        }
+      ]
+    }
+  ]
+}
